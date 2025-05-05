@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "WY4+GyrQOH8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\snz\\Desktop\\Dinamic_prueba\\PruebaTecnicaDinamicBackend\\Models\\Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\snz\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\snz\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\snz\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+  ],
+  "logs": []
+}
