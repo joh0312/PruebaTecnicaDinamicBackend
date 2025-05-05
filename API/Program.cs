@@ -1,6 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Data;
 using Data.Servicios;
+using Data.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +24,24 @@ builder.Services.AddScoped<PacienteService>();
 builder.Services.AddScoped<MedicoService>();
 builder.Services.AddScoped<CitaService>();
 builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<ITokenServicio, TokenService>();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["TokenKey"])),
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+    });
+
+
+
+builder.Services.AddAuthorization();
 
 // CORS: permitir cualquier origen, método y encabezado
 builder.Services.AddCors(options =>

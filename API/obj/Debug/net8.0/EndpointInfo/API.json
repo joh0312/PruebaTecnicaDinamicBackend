@@ -67,6 +67,18 @@
         }
       }
     },
+    "/api/citas/disponibles": {
+      "get": {
+        "tags": [
+          "Cita"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/medicos/especialidades/{especialidad}": {
       "get": {
         "tags": [

@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "API.Controllers.CitaController",
+    "Method": "ObtenerCitasDisponibles",
+    "RelativePath": "api/citas/disponibles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.CitaController",
     "Method": "ReservarCita",
     "RelativePath": "api/citas/reservar",
     "HttpMethod": "POST",

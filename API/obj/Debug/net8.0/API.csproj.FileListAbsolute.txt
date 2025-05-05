@@ -73,3 +73,4 @@ C:\Users\snz\Desktop\Dinamic_prueba\PruebaTecnicaDinamicBackend\API\obj\Debug\ne
 C:\Users\snz\Desktop\Dinamic_prueba\PruebaTecnicaDinamicBackend\API\obj\Debug\net8.0\API.pdb
 C:\Users\snz\Desktop\Dinamic_prueba\PruebaTecnicaDinamicBackend\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\snz\Desktop\Dinamic_prueba\PruebaTecnicaDinamicBackend\API\obj\Debug\net8.0\ref\API.dll
+C:\Users\snz\Desktop\Dinamic_prueba\PruebaTecnicaDinamicBackend\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

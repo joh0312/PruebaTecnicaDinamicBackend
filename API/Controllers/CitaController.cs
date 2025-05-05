@@ -32,6 +32,21 @@ namespace API.Controllers
             }
         }
 
+        [HttpGet("disponibles")]
+        public async Task<IActionResult> ObtenerCitasDisponibles()
+        {
+            try
+            {
+                var citas = await _citaService.ObtenerCitasDisponiblesAsync();
+                return Ok(citas);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = "Error al obtener las citas disponibles.", Details = ex.Message });
+            }
+        }
+
+
         public class ReservarCitaRequest
         {
             public int IdCita { get; set; }

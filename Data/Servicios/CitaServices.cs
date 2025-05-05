@@ -44,5 +44,56 @@ namespace Data.Servicios
                 await connection.CloseAsync();
             }
         }
+
+
+        public async Task<List<CitaDto>> ObtenerCitasDisponiblesAsync()
+        {
+            var citas = new List<CitaDto>();
+
+            var connection = _context.Database.GetDbConnection();
+
+            try
+            {
+                await connection.OpenAsync();
+
+                using (var command = connection.CreateCommand())
+                {
+                    command.CommandText = "obtenerCitas";
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    using (var reader = await command.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            citas.Add(new CitaDto
+                            {
+                                Id = reader.GetInt32(0),
+                                IdPaciente = reader.IsDBNull(1) ? null : reader.GetInt32(1),
+                                IdMedico = reader.GetInt32(2),
+                                Especialidad = reader.GetString(3),
+                                FechaHora = reader.GetDateTime(4),
+                                Estado = reader.GetString(5)
+                            });
+                        }
+                    }
+                }
+            }
+            finally
+            {
+                await connection.CloseAsync();
+            }
+
+            return citas;
+        }
+
+        public class CitaDto
+        {
+            public int Id { get; set; }
+            public int? IdPaciente { get; set; }
+            public int IdMedico { get; set; }
+            public string Especialidad { get; set; }
+            public DateTime FechaHora { get; set; }
+            public string Estado { get; set; }
+        }
     }
 }
