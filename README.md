@@ -1,6 +1,6 @@
-# Proyecto API .NET 8 con Entity Framework - Arquitectura en 3 Capas
+# Proyecto API .NET 7 con Entity Framework - Arquitectura en 3 Capas
 
-Este proyecto es una API construida con ASP.NET Core 8 y Entity Framework Core, estructurada en tres capas: API, Data y Models.
+Este proyecto es una API construida con ASP.NET Core 7 y Entity Framework Core, estructurada en tres capas: API, Data y Models.
 
 ---
 
