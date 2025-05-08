@@ -74,7 +74,7 @@ namespace Data.Servicios
 
             return new UsuarioDto
             {
-                Paciente = paciente,
+                Documento = paciente.Documento,
 
                 Token = token
             };
